@@ -1,0 +1,105 @@
+@import "react-toastify/dist/ReactToastify.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  background: #0F0D1A;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+.Toastify__toast-container {
+  top: 1rem;
+  right: 1rem;
+  z-index: 9999;
+}
+
+.Toastify__toast {
+  border-radius: 12px;
+  padding: 16px;
+  backdrop-filter: blur(12px);
+  background: rgba(30, 27, 46, 0.95);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  min-height: auto;
+}
+
+.Toastify__toast--success {
+  border-color: rgba(16, 185, 129, 0.4);
+}
+
+.Toastify__toast--error {
+  border-color: rgba(239, 68, 68, 0.4);
+}
+
+.Toastify__toast--info {
+  border-color: rgba(59, 130, 246, 0.4);
+}
+
+.Toastify__toast-body {
+  padding: 0;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.Toastify__progress-bar {
+  background: linear-gradient(90deg, #8B5CF6, #3B82F6);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #8B5CF6, #3B82F6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-card {
+  backdrop-filter: blur(12px);
+  background: rgba(30, 27, 46, 0.6);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.glass-card:hover {
+  border-color: rgba(139, 92, 246, 0.4);
+  box-shadow: 0 8px 32px rgba(139, 92, 246, 0.2);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+-moz-appearance: textfield;
+}
+
+.enriched-field {
+  @apply bg-green-500/10 border border-green-500/30 rounded-lg p-3 transition-all duration-500;
+  animation: enrichPulse 2s ease-in-out;
+}
+
+@keyframes enrichPulse {
+  0% { 
+    background-color: rgba(16, 185, 129, 0.2);
+    border-color: rgba(16, 185, 129, 0.5);
+  }
+  50% { 
+    background-color: rgba(16, 185, 129, 0.1);
+    border-color: rgba(16, 185, 129, 0.3);
+  }
+  100% { 
+    background-color: rgba(16, 185, 129, 0.05);
+    border-color: rgba(16, 185, 129, 0.2);
+  }
+}
